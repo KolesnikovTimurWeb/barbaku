@@ -1,0 +1,340 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+@font-face {
+	font-family:Calibri;
+	src: url('../font/Calibri\ Regular.ttf');
+	font-weight:400;
+	font-style: normal;
+}
+@font-face {
+	font-family:Calibri;
+	src: url('../font/Calibri\ Bold.TTF.ttf');
+	font-weight:700;
+	font-style: normal;
+}
+@font-face {
+   font-family: "CentSchbook BT [Rus by me]";
+	src: url('../font/centschbook-bt-rus-by-me-bold.otf');
+	font-weight:400;
+	font-style: normal;
+}
+:root{
+	--biggest-font-size: 100px;
+
+	--h1-font-size: 44px;
+	--h2-font-size: 25px;
+	--h2-numbers-font-size: 40px;
+	--h3-font-size:30px;
+	--button-font-size:20px ;
+	--normal-p-font-size:18px ;
+	--small-font-size: 14px;
+
+
+	--container-width-pc:80%;
+	--container-width-tablet:88%;
+	--container-width-phone:94%;
+
+	--color-white:#fff;
+	--color-black:#0E0E0E;
+   --color-primary:#F36210;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family:Calibri;
+}
+
+html{
+	scroll-behavior: smooth;
+   background-color: #2B2B2B;
+
+
+}
+body{
+	overflow-x: hidden;
+
+	
+}
+img,svg,
+video{
+	max-width: 100%;
+	height: auto;
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+h1,h2,h3{
+	font-weight: 600;
+}
+button,
+input {
+  border: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+}
+.container{
+	max-width: var(--container-width-pc);
+	margin: 0 auto;
+}
+.section{
+	padding: 100px 0;
+}
+
+header{
+	padding: 20px 0;
+	position: fixed;
+   width: 100%;
+   top: 0;
+   z-index: 1000;
+   left: 0;
+
+}
+
+.burger-menu{
+   width: 50px;
+   height: 20px;
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+   position: relative;
+}
+.burger-menu span:nth-child(1){
+   top: 0;
+}
+.burger-menu span:nth-child(2){
+   top: 50%;
+}
+.burger-menu span:nth-child(3){
+   bottom: 0%;
+}
+.burger-menu span{
+   width: 100%;  
+   height: 1px;
+   left: 0;
+   position: absolute;
+   background-color: #C19247;
+   transition: .3s ease-in-out;
+}
+
+.header-container{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 100%;
+
+}
+.header-nav{
+   width: 100%;
+   display: flex;
+   align-items: center;
+}
+.header-list{
+   width: 100%;
+   display: flex;
+   align-items: center;
+   margin-right: 40px;
+   justify-content: end;
+}
+.header-link:hover{
+   opacity: 0.6;
+   transition: .3s ease-in-out;
+}
+.header-link{
+   transition: .3s ease-in-out;
+   margin-left: 40px;
+   color: #C19247;
+   font-family: Calibri;
+   font-size: 20px;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   font-weight: 400;
+}
+
+
+.global{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+   position: relative;
+
+   background-image: url('../img/global-bacround.jpg');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+
+   color: #fff;
+}
+.global-text{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 20px;
+   flex-direction: column;
+}
+.global-text a::after,
+.gold-button::after{
+   content: "";
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 100%;
+   height: 100%;
+   padding: 3px;
+   border: 1px dashed #C19247;
+}
+.global-text a:hover,
+.gold-button:hover{
+   opacity: 0.7;
+   transition: .3s ease-in-out;
+}
+.global-text a{
+   transition: .3s ease-in-out;
+
+   position: relative;
+   padding: 10px 20px;
+   background: #C19247;
+   color: #FFF;
+   font-size: 24px;
+   font-weight: 700;
+}
+.gold-button{
+   transition: .3s ease-in-out;
+
+   position: relative;
+   padding: 10px 40px;
+   background: #C19247;
+   color: #FFF;
+   font-size: 24px;
+   font-weight: 700;
+}
+.about-container{
+   display: grid;
+   grid-template-columns: 50% 50%;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.about-text{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 10px;
+   margin-left: 30px;
+}
+.about-text p{
+   color: #FFF;
+   text-align: center;
+   margin: 20px 0;
+   font-family: Calibri;
+   font-size: 24px;
+   font-weight: 400;
+}
+.about-text a{
+   color: #C19247;
+   font-family: 'Lobster', cursive;
+   font-size: 32px;
+   display: flex;
+   align-items: center;
+   justify-content: end;
+   width: 100%;
+   font-weight: 100;
+}
+.about-text span{
+   color: #FFF;
+   font-family: 'Lobster', cursive;
+   font-weight: 100;
+}
+.about-text h2{
+   color: #FFF;
+   font-family: "CentSchbook BT [Rus by me]";
+
+   font-size: 48px;
+   font-weight: 400;
+}
+
+
+.menu-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+.manu-text h2{
+   color: #FFF;
+   text-align: center;
+
+   font-family: "CentSchbook BT [Rus by me]";
+   font-size: 48px;
+   font-weight: 400;
+   margin-bottom: 30px;
+}
+.manu-text a{
+   width: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.manu-text{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+}
+
+
+.vip-container{
+   display: grid;
+   grid-template-columns: 50% 50%;
+   gap: 20px;
+   align-items: center;
+
+}
+.vip-text{
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+}
+.vip-text h2{
+   color: #FFF;
+   text-align: center;
+   margin-bottom: 20px;
+   font-family: "CentSchbook BT [Rus by me]";
+   font-size: 48px;
+   font-weight: 400;
+}
+.vip-text p{
+   color: #FFF;
+   margin-bottom: 20px;
+   font-family: Calibri;
+   font-size: 24px;
+   font-weight: 400;
+}
+.vip-text span{
+   font-family: 'Lobster', cursive;
+
+}
+.vip-text a{
+   color: #C19247;
+
+   /* пропись */
+   font-family: 'Lobster', cursive;
+
+   font-size: 28px;
+   font-weight: 100;
+}
